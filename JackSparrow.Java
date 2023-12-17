@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.util.*;
 
@@ -9,9 +10,15 @@ public class JackSparrow {
         int bcount= scanner.nextInt();
         int ccount= scanner.nextInt();
         int dcount= scanner.nextInt();
+   
+        bcount = bcount/2 + bcount%2;  
+       
+        acount = acount - ccount;
 
-        int totalWeight = acount+bcount*2+ccount*3+dcount*4;
-        
-        int boatCount = totalWeight/4
+        if (bcount%2==1)    
+            acount--;
+    
+        System.out.println((acount<1 ?0:1 )+bcount+ccount+dcount);
+    }
         
 }
